@@ -6,6 +6,12 @@
 
 [下载最新版本](https://github.com/moran-extensions/mixia-extension/releases/latest) · [问题反馈](https://github.com/moran-extensions/mixia-extension/issues) · [隐私说明](PRIVACY.md) · [Moran Extensions](https://github.com/moran-extensions)
 
+## 效果预览
+
+以下为虚构账户与公开测试密钥生成的演示界面，不包含真实账户信息。
+
+<img src="docs/preview.png" width="420" alt="秘匣电脑验证码弹窗预览：虚构账户、固定搜索框、验证码列表和设置入口">
+
 ## 使用
 
 1. 手机秘匣打开 **设置 → 导出加密备份**，设置备份密码，保存 `.mixia` 文件。当前手机备份通常使用六位数字密码。

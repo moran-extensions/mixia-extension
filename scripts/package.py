@@ -18,6 +18,7 @@ SOURCE_FILES = EXTENSION_FILES + (
     'tests/fixtures/mixia-empty.mixia', 'tests/fixtures/mixia-hotp.mixia',
     'tests/fixtures/mixia-legacy.mixia',
     'README.md', 'PRIVACY.md', 'VALIDATION.md', 'CHANGELOG.md', 'RELEASE-NOTES.md',
+    'docs/preview.png',
     'package.json', 'package-lock.json', '.gitignore',
 )
 
