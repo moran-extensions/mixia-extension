@@ -1,0 +1,10 @@
+import { copyFile, readFile, writeFile, mkdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import path from 'node:path';
+const root = path.resolve(import.meta.dirname, '..');
+await copyFile(path.join(root, 'extension/vault.html'), path.join(root, 'extension/popup.html'));
+const manifest = JSON.parse(await readFile(path.join(root, 'extension/manifest.json'), 'utf8'));
+await mkdir(path.join(root, 'dist'), { recursive: true });
+const id = [...createHash('sha256').update(Buffer.from(manifest.key, 'base64')).digest().subarray(0, 16)].flatMap(byte => [byte >> 4, byte & 15]).map(value => String.fromCharCode(97 + value)).join('');
+await writeFile(path.join(root, 'dist/extension-id.txt'), id + '\n');
+console.log(`Built offline file-import extension ${manifest.version}; no helper or server required.`);

@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "秘匣 · 电脑验证码",
+  "version": "0.2.3",
+  "description": "导入秘匣加密备份，在电脑离线生成验证码。无需服务器或连接助手，账户仅保存在本机。",
+  "permissions": [
+    "storage",
+    "alarms",
+    "clipboardWrite"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "秘匣验证码"
+  },
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4MCDQVqGdivdHUPuv6gJvKJNnW8aQu+6+bnHfoC+93XVJgoMbYrsW8ys54jfFy4Ue6wnvuTVa8DXSrN3rbJgF0D7puWAEywhN4oVCurIaVzzRX6SYsu4hQdR84k924QjVl9pvVgvq6wAhaGGHSGiA9jlnPQ/MjnYAAPW/glTkAykjbSivhOUzL/kYWNFDigHIbcToyhRXV7sRf9A/69ePefc9qnW4fHj8kSVLQad+RnJtkEotRpCwxua2hzTZRnDzLSbbcH+tj4Mibykb75bGHFlzNscl1+orjdY/VqBebe2Lz4LgWS5zVKuSjHQfyIUSY3DLpqIMYAHthNarSTjQwIDAQAB"
+}
